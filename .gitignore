@@ -1,0 +1,7 @@
+/backend/node_modules
+/backend/dataSource/Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products_May19.csv
+/backend/dataSource/Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products.csv
+/backend/package-lock.json
+/frontend/digital-marketing/node_modules
+/frontend/digital-marketing/package-lock.json
+
