@@ -13,4 +13,8 @@ export class ApiServiceService {
   getDashboardData() {
       return this.http.get("http://localhost:4000/api/dashboard")
   }
+
+  getReviewData() {
+    return this.http.get("http://localhost:4000/api/charts")
+}
 }

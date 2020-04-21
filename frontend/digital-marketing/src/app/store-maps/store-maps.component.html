@@ -1,0 +1,21 @@
+<h1>MAPS</h1>
+<agm-map [(latitude)]="lat" [(longitude)]="lng" [disableDefaultUI]="false"
+  [zoomControl]="true" [(zoom)]="zoom">
+
+  <agm-marker *ngFor ='let m of storeLocations'
+  [latitude]="m.lat"
+  [longitude]="m.lng"
+  [iconUrl]= "icon">
+
+  <agm-info-window #infoWindow>
+    <strong>Store</strong>
+      <br><br>
+      <strong>Location: {{m.location}}</strong>
+      <br><br>
+      <strong>Latitude: {{m.lat}}</strong>
+      <br><br>
+      <strong>Longitude: {{m.lng}}</strong>
+
+  </agm-info-window>
+  </agm-marker>
+</agm-map>

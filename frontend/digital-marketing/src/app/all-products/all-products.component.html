@@ -1,0 +1,25 @@
+<div style="float: right;margin-right: 10px;">
+  <input (change)="changeInput()" style="margin-right: 5px;" type="email" [(ngModel)]="searchValue">
+  <button (click)="searchProducts()" style="margin-bottom: 5px;"
+    class="btn btn-primary">
+    <fa-icon class="" [icon]="faSearch"></fa-icon>
+  </button>
+</div>
+<div class="row justify-content-around">
+  <div class="col-xs-3" *ngFor="let review of reviewData | reverse">
+    <div class="container-fluid mt-4" style="float: left;">
+      <div class="mb-3" style="text-align: center;">
+        <span><strong>Brand: {{review.brand}}</strong></span>
+      </div>
+      <div class='first'>
+        <img class="img1" src={{review.image}}>
+      </div>
+      <div style="text-align: center;">
+        <span><strong>Rating</strong></span>
+        <div style="margin-left: 85px;">
+          <bar-rating [(rate)]="review.rating" [max]="5" [theme]="'stars'"></bar-rating>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -71,7 +71,7 @@ router.route('/dashboard').get(function (req, res) {
     res.json(data)
 })
 
-router.route('/reviews').get(function (req,res) {
+router.route('/charts').get(function (req,res) {
     res.json(review)
 })
 

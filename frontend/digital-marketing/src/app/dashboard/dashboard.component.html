@@ -1,3 +1,6 @@
+<div>
+  <Button class="btn btn-info  ml-3" [routerLink]="'/allProducts'">All products</Button>
+</div>
 <div class="row justify-content-around">
   <div class="col-xs-6">
     <div class="container-fluid mb-5">
@@ -7,7 +10,7 @@
       </div>
       <div style="display: inline-flex;" class="mt-3">
         <span>Rating:<bar-rating [(rate)]="rate" [max]="5" [theme]="'stars'"></bar-rating></span>
-        &nbsp;&nbsp;<span style="float: left;">Available at: Apple Store</span>
+        &nbsp;&nbsp;<span style="float: left;">Available at: <button class="btn btn-primary" (click)="navigateToStore('Apple')">Apple Store</button></span>
 
       </div>
     </div>
@@ -20,7 +23,7 @@
       <div >
         <div style="display: inline-flex;"class="mt-5">
           <span>Rating:<bar-rating [(rate)]="rate" [max]="5" [theme]="'stars'"></bar-rating></span>
-          &nbsp;&nbsp;<span style="float: left;">Available at: T-mobile</span>
+          &nbsp;&nbsp;<span style="float: left;">Available at: <button class="btn btn-primary" (click)="navigateToStore('Tmobile')">T-mobile</button></span>
   
         </div>
 
@@ -37,7 +40,7 @@
       </div>
       <div style="display: inline-flex;"class="mt-4 col2">
         <span>Rating:<bar-rating [(rate)]="rate" [max]="5" [theme]="'stars'"></bar-rating></span>
-        &nbsp;&nbsp;<span style="float: left;">Available at: Macy's</span>
+        &nbsp;&nbsp;<span style="float: left;">Available at: <button class="btn btn-primary" (click)="navigateToStore('Fossil')">Fossil</button></span>
 
       </div>
     </div>
@@ -49,7 +52,7 @@
       </div>
       <div style="display: inline-flex;"class="mt-4 col2">
         <span>Rating:<bar-rating [(rate)]="rate" [max]="5" [theme]="'stars'"></bar-rating></span>
-        &nbsp;&nbsp;<span style="float: left;">Available at: BestBuy</span>
+        &nbsp;&nbsp;<span style="float: left;">Available at: <button class="btn btn-primary" (click)="navigateToStore('BestBuy')"> BestBuy</button></span>
 
       </div>
     </div>
@@ -65,7 +68,7 @@
       </div>
       <div style="display: inline-flex;"class="mt-4">
         <span>Rating:<bar-rating [(rate)]="rate" [max]="5" [theme]="'stars'"></bar-rating></span>
-        &nbsp;&nbsp;<span style="float: left;">Available at: BestBuy</span>
+        &nbsp;&nbsp;<span style="float: left;">Available at: <button class="btn btn-primary" (click)="navigateToStore('BestBuy')"> BestBuy</button></span>
 
       </div>
     </div>
@@ -78,7 +81,7 @@
       </div>
       <div style="display: inline-flex;"class="mt-4">
         <span>Rating:<bar-rating [(rate)]="rate" [max]="5" [theme]="'stars'"></bar-rating></span>
-        &nbsp;&nbsp;<span style="float: left;">Available at: BestBuy</span>
+        &nbsp;&nbsp;<span style="float: left;">Available at: <button class="btn btn-primary" (click)="navigateToStore('BestBuy')">BestBuy</button></span>
 
       </div>
     </div>
