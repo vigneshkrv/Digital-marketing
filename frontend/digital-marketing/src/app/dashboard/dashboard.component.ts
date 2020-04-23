@@ -10,12 +10,16 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   reviews:any = []
   rate:number=4.5
+  stores=["Best Buy", "Apple", "Apple", "Best Buy", "Online","Best Buy", "Online", "Best Buy",]
   constructor(private apiService:ApiServiceService, private router:Router ){
    
   }
   ngOnInit() {
-    this.apiService.getDashboardData().subscribe(x => {
-      this.reviews=x
+    this.apiService.getDashboardData().subscribe((x:any[]) => {
+      this.reviews=x.filter(k=>{
+        return k.rating==5
+      })
+     this.reviews= this.reviews.slice( Math.max(this.reviews.length-8,0))
     })
   }
 

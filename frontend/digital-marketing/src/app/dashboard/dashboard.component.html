@@ -1,7 +1,30 @@
-<div>
-  <Button class="btn btn-info  ml-3" [routerLink]="'/allProducts'">All products</Button>
+<div class="row justify-content-end mr-3">
+  <Button class="btn btn-info" [routerLink]="'/allProducts'">All products</Button>
 </div>
 <div class="row justify-content-around">
+  <div class="col-md-3" *ngFor="let review of reviews | reverse let i=index">
+    <div class="container-fluid mt-4" style="float: left;">
+
+      <div class='first'>
+        <img class="img1" src={{review.image}}>
+      </div>
+      <div class="mb-3">
+        <span><strong>Brand:</strong> {{review.brand}}</span>
+      </div>
+      <div>
+        <span><strong>Product:</strong> {{review.title}}</span>
+      </div>
+      <div>
+        <span><strong>Rating</strong></span>
+        <bar-rating [(rate)]="review.rating" [max]="5" [theme]="'stars'"></bar-rating>
+        <span><strong>Price: </strong></span> <span><strong>{{review.price}}$</strong></span>
+      </div>
+      <div><span style="float: left;">Available at: <button class="btn btn-primary"
+            (click)="navigateToStore(this.stores[i])">{{this.stores[i]}} Store</button></span></div>
+    </div>
+  </div>
+</div>
+<!-- <div class="row justify-content-around">
   <div class="col-xs-6">
     <div class="container-fluid mb-5">
       <div class="first">
@@ -89,4 +112,4 @@
 
 
 
-</div>
+</div> -->

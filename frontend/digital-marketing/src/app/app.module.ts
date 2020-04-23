@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BarRatingModule } from "ngx-bar-rating";
 import {HttpClientModule} from '@angular/common/http'
+import { MatToolbarModule, MatFormFieldModule,MatCheckboxModule, MatInputModule, MatOptionModule, MatSelectModule, MatIconModule, MatButtonModule, MatCardModule, MatTableModule, MatDividerModule, MatSnackBarModule } from '@angular/material';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -13,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { StoreMapsComponent } from './store-maps/store-maps.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoresComponent } from './stores/stores.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { StoreMapsComponent } from './store-maps/store-maps.component';
     AllProductsComponent,
     ReversePipe,
     ReviewChartsComponent,
-    StoreMapsComponent
+    StoreMapsComponent,
+    StoresComponent
   ],
   imports: [
     BarRatingModule,
@@ -31,7 +36,11 @@ import { StoreMapsComponent } from './store-maps/store-maps.component';
     HttpClientModule,
     AgmCoreModule.forRoot({apiKey: 'AIzaSyAoUItadOvNS5aG7qm0bvV7rlBWEEv8l08'+ '&libraries=visualization'}),
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [GoogleMapsAPIWrapper],
   bootstrap: [AppComponent]

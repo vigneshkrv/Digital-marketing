@@ -2,19 +2,19 @@
 <agm-map [(latitude)]="lat" [(longitude)]="lng" [disableDefaultUI]="false"
   [zoomControl]="true" [(zoom)]="zoom">
 
-  <agm-marker *ngFor ='let m of storeLocations'
-  [latitude]="m.lat"
-  [longitude]="m.lng"
+  <agm-marker
+  [latitude]="store.lat"
+  [longitude]="store.lng"
   [iconUrl]= "icon">
 
   <agm-info-window #infoWindow>
     <strong>Store</strong>
       <br><br>
-      <strong>Location: {{m.location}}</strong>
+      <strong>Location: {{store.location}}</strong>
       <br><br>
-      <strong>Latitude: {{m.lat}}</strong>
+      <strong>Latitude: {{store.lat}}</strong>
       <br><br>
-      <strong>Longitude: {{m.lng}}</strong>
+      <strong>Longitude: {{store.lng}}</strong>
 
   </agm-info-window>
   </agm-marker>

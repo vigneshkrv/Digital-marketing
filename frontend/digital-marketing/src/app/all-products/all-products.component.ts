@@ -27,8 +27,8 @@ export class AllProductsComponent implements OnInit {
     if(this.searchValue!="")
       {
       this.searchResult=this.reviews.filter((x)=>{
-        
-        return  this.searchValue.includes(x.brand)
+        var temp= x.title.toLowerCase()
+        return temp.includes(this.searchValue.toLowerCase())
       })
       
       this.reviewData = this.searchResult

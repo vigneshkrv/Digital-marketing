@@ -4,12 +4,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { ReviewChartsComponent} from "./review-charts/review-charts.component"
 import { StoreMapsComponent } from './store-maps/store-maps.component';
+import { StoresComponent } from './stores/stores.component';
 
 const routes: Routes = [{ path: 'dashboard', component: DashboardComponent }, 
                         { path: '', redirectTo: "dashboard", pathMatch: 'full' },
                         {path:'allProducts', component:AllProductsComponent},
                         {path:'charts', component:ReviewChartsComponent},
-                        {path:'storelocations',component:StoreMapsComponent}];
+                        {path:'storelocations',component:StoresComponent},
+                        {path:'divvylocations',component:StoreMapsComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

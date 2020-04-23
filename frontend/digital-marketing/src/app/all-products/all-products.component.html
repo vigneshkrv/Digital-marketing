@@ -5,20 +5,22 @@
     <fa-icon class="" [icon]="faSearch"></fa-icon>
   </button>
 </div>
-<div class="row justify-content-around">
-  <div class="col-xs-3" *ngFor="let review of reviewData | reverse">
+<div class="row justify-content-around mt-5">
+  <div class="col-md-3" *ngFor="let review of reviewData | reverse">
     <div class="container-fluid mt-4" style="float: left;">
-      <div class="mb-3" style="text-align: center;">
-        <span><strong>Brand: {{review.brand}}</strong></span>
-      </div>
+     
       <div class='first'>
         <img class="img1" src={{review.image}}>
       </div>
-      <div style="text-align: center;">
-        <span><strong>Rating</strong></span>
-        <div style="margin-left: 85px;">
-          <bar-rating [(rate)]="review.rating" [max]="5" [theme]="'stars'"></bar-rating>
-        </div>
+      <div class="mb-3">
+        <span><strong>Brand: {{review.brand}}</strong></span>
+      </div>
+      <div class="mb-3" >
+        <span><strong>Product: {{review.title}}</strong></span>
+      </div>
+      <div>
+        <span><strong>Rating</strong></span><bar-rating [(rate)]="review.rating" [max]="5" [theme]="'stars'"></bar-rating>
+        <span><strong>Price: </strong></span>  <span><strong>{{review.price}}$</strong></span>
       </div>
     </div>
   </div>
