@@ -17,4 +17,7 @@ export class ApiServiceService {
   getReviewData() {
     return this.http.get("http://localhost:4300/api/charts")
 }
+  getProductDetail(asin) {
+    return this.http.get(`http://localhost:4300/api/product?asin=${asin}`)
+  }
 }

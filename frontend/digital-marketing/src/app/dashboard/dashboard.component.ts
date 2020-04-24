@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.apiService.getDashboardData().subscribe((x:any[]) => {
       this.reviews=x.filter(k=>{
-        return k.rating==5
+        return (k.rating==5)
       })
      this.reviews= this.reviews.slice( Math.max(this.reviews.length-8,0))
     })
@@ -26,7 +26,11 @@ export class DashboardComponent implements OnInit {
   navigateToStore(x)
   {
     console.log(x);
+    if(x!="Online")
     this.router.navigate(["storelocations"],{queryParams:{store:x}})
   }
 
+  navigateProduct(x) {
+    this.router.navigate(["ProductDetail"],{queryParams:{asin:x}})
+  }
 }

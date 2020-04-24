@@ -3,7 +3,7 @@
 </div>
 <div class="row justify-content-around">
   <div class="col-md-3" *ngFor="let review of reviews | reverse let i=index">
-    <div class="container-fluid mt-4" style="float: left;">
+    <div class="container-fluid mt-4" style="float: left;" (click)="navigateProduct(review.asin)">
 
       <div class='first'>
         <img class="img1" src={{review.image}}>

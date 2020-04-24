@@ -22,7 +22,7 @@ export class StoreMapsComponent implements OnInit {
   divvyLocations: Location[];
   constructor(private route:ActivatedRoute) { }
   icon = {
-    url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+    url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
     scaledSize: {
       width: 60,
       height: 60

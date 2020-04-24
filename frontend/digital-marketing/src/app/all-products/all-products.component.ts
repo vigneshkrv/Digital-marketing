@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-products',
@@ -13,7 +14,7 @@ export class AllProductsComponent implements OnInit {
   reviewData:any = []
   searchValue:any=""
   faSearch = faSearch;
-  constructor(private apiService:ApiServiceService){
+  constructor(private apiService:ApiServiceService, private router:Router){
    
   }
   ngOnInit() {
@@ -40,6 +41,10 @@ export class AllProductsComponent implements OnInit {
     {
       this.reviewData = this.reviews 
     }
+  }
+
+  navigateProduct(x) {
+    this.router.navigate(["ProductDetail"],{queryParams:{asin:x}})
   }
 
 }

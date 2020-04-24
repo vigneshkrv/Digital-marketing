@@ -17,6 +17,7 @@ import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { StoreMapsComponent } from './store-maps/store-maps.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoresComponent } from './stores/stores.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StoresComponent } from './stores/stores.component';
     ReversePipe,
     ReviewChartsComponent,
     StoreMapsComponent,
-    StoresComponent
+    StoresComponent,
+    ProductDetailComponent
   ],
   imports: [
     BarRatingModule,
