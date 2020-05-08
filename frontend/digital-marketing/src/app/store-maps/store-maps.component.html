@@ -1,0 +1,21 @@
+<h1>MAPS</h1>
+<agm-map [(latitude)]="lat" [(longitude)]="lng" [disableDefaultUI]="false"
+  [zoomControl]="true" [(zoom)]="zoom">
+
+  <agm-marker
+  [latitude]="store.lat"
+  [longitude]="store.lng"
+  [iconUrl]= "icon">
+
+  <agm-info-window #infoWindow>
+    <strong>Store</strong>
+      <br><br>
+      <strong>Location: {{store.location}}</strong>
+      <br><br>
+      <strong>Latitude: {{store.lat}}</strong>
+      <br><br>
+      <strong>Longitude: {{store.lng}}</strong>
+
+  </agm-info-window>
+  </agm-marker>
+</agm-map>

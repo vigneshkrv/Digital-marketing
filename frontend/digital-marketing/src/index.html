@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DigitalMarketing</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoUItadOvNS5aG7qm0bvV7rlBWEEv8l08&libraries=visualization">
+  
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawChartBrandRating);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Brand", "Total Reviews", { role: "style" } ],
+        ["Samsung", 37701, "#b87333"],
+        ["Motorola", 9419, "silver"],
+        ["Apple", 6315, "gold"],
+        ["Nokia", 6182, "color: #e5e4e2"],
+        ["Xiaomi",	5574,"blue"],
+        ["Google"	,	4238, "green"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                        { calc: "stringify",
+                          sourceColumn: 1,
+                          type: "string",
+                          role: "annotation" },
+                        2]);
+
+      var options = {
+        title: "Brand Analysis Based on Number of Product Reviews",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+
+  function drawChartBrandRating() {
+    var data = google.visualization.arrayToDataTable([
+        ["Brand", "Total Reviews", { role: "style" } ],  
+      ["Xiaomi",	4.4,"blue"],
+      ["HUAWEI",	4.0,"blue"],
+      ["ASUS",	3.9,"blue"],
+      ["Sony",	3.8,"blue"],
+      ["Apple",	3.8,"blue"],
+      ["Google"	,3.8,"blue"],
+      ["Motorola",3.6,"blue"],
+      ["Samsung",	3.6,"blue"],
+      ["OnePlus",	3.6,"blue"],
+      ["Nokia",	3.4,"blue"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                        { calc: "stringify",
+                          sourceColumn: 1,
+                          type: "string",
+                          role: "annotation" },
+                        2]);
+
+      var options = {
+        title: "Brand Analysis Based on their Average Product Ratings",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "75%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values_rating"));
+      chart.draw(view, options);
+  }
+  </script>
+ <!-- <script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChartAmazon);
+  google.charts.setOnLoadCallback(drawChartSony);
+  google.charts.setOnLoadCallback(drawChartJbl);
+  google.charts.setOnLoadCallback(drawChartSamsung);
+  google.charts.setOnLoadCallback(drawChartAlpine);
+
+  function drawChartAmazon() {
+    var data = google.visualization.arrayToDataTable([
+      ['Total', 'Freq'],
+      ['Recommended',     95],
+      ['Not Recommended',     5]
+    ]);
+    var options = {
+      title: 'Percentage of people who recommend Amazon'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('piechartAmazon'));
+    chart.draw(data, options);
+  }
+  
+  function drawChartSony() {
+      var data = google.visualization.arrayToDataTable([
+        ['Total', 'Freq'],
+        ['Recommended',     92],
+        ['Not Recommended',     8]
+      ]);
+      var options = {
+        title: 'Percentage of people who recommend Sony'
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('piechartSony'));
+      chart.draw(data, options);
+    }
+  
+  function drawChartJbl() {
+      var data = google.visualization.arrayToDataTable([
+        ['Total', 'Freq'],
+        ['Recommended',     87],
+        ['Not Recommended',     13]
+      ]);
+      var options = {
+        title: 'Percentage of people who recommend Samsung'
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('piechartJbl'));
+      chart.draw(data, options);
+    } 
+  
+  function drawChartSamsung() {
+      var data = google.visualization.arrayToDataTable([
+        ['Total', 'Freq'],
+        ['Recommended',     68],
+        ['Not Recommended',     32]
+      ]);
+      var options = {
+        title: 'Percentage of people who recommend Samsung'
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('piechartSamsung'));
+      chart.draw(data, options);
+    } 
+  
+  function drawChartAlpine() {
+      var data = google.visualization.arrayToDataTable([
+        ['Total', 'Freq'],
+        ['Recommended',     96],
+        ['Not Recommended',     4]
+      ]);
+      var options = {
+        title: 'Percentage of people who recommend Alpine'
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('piechartAlpine'));
+      chart.draw(data, options);
+    } 
+</script> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<div class="justify-content-end">
+  <button class="btn btn-primary ml-3" (click)="testReload()">Load Statistics</button>
+</div>
+<h1 style="text-align: center;">
+  Statistics
+</h1>
+<div class="row justify-content-center">
+  <div id="barchart_values"></div>
+  <div id="barchart_values_rating"></div>
+</div>
+<app-top-product-stats *ngFor='let review of reviews let i=index' [product]="review" [Pid]="idArray[i]"></app-top-product-stats>

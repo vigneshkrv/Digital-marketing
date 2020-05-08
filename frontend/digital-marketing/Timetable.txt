@@ -1,0 +1,9 @@
+15-4 = navbar
+16-4 = Account creation/ register/login/logout
+17-4 = dashboard
+18-4 = dashboard
+19-4 = charts
+20-4 = charts
+21-4 = google map
+22-4 = nearby stores
+23-4 = divvy api
